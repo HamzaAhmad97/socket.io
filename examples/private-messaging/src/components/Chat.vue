@@ -72,7 +72,7 @@ export default {
       user.messages = [];
       user.hasNewMessages = false;
     };
-
+    // handles determining if the user is the current user and sorting users in the panel
     socket.on("users", (users) => {
       users.forEach((user) => {
         user.self = user.userID === socket.id;
